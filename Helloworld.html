@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+      .myDiv{
+        width: 300%;
+        height: 200px;
+        margin: 20px 10px;
+        padding: 20px;
+        color:white;
+        display: inline-block;
+      }
+
+      #red{
+        background-color: red;
+      }
+
+      #green{
+        background-color: green;
+      }
+   
+      .myRow{
+        width: 100%;
+        height: 100px;
+      }
+
+      @media(min-width:576px){body{background: yellow}}
+      @media(min-width:768px){body{background: green}}
+      @media(min-width:992px){body{background: purple}}
+      @media(min-width:1200px){body{background: blue}}
+
+      @media(max-width:575px){body{background:red}}
+    </style>
+
+    <style>
+      div{
+        margin-top:20px;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div>Intro Text</div>
+      </div>
+    </header>
+    <h1>Hello, world!</h1>
+    <div class="myDiv" id="red">
+      Hello
+    </div>
+    <div class="myDiv" id="green">
+      World
+    </div>
+    <hr>
+    <div class="myDiv bg-primary">Hi</div>
+    <div class="myDiv bg-secondary">Hi</div>
+    <div class="myDiv bg-succes">Hi</div>
+    <div class="myDiv bg-warning">Hi</div>
+
+    <!--Container, container fluid and row are classes defined by boot strap for doing layout stuff-->
+    <div class="container">
+      <div class="header bg-primary">
+        Containers
+      </div>
+  </div>
+
+  <div class="container-fluid">
+      <div class="header bg-primary">
+        Containers
+      </div>
+  </div>
+
+  <hr>
+
+  <!--Boot strap allows for up to 12 columns per contrainer-->
+  <div class="container">
+    <div class="row">
+      <div class="myRow col bg-success"></div>
+      <div class="myRow col bg-warning"></div>
+      <div class="myRow col bg-secondary"></div>
+    </div>
+    <div class="row">
+      <div class="myRow col bg-primary"></div>
+      <div class="myRow col bg-info"></div>
+    </div>
+  </div>
+
+  <h1 class="text-center display-3 my-2">Breakpoints in Bootstrap 4</h1>
+
+  <!--Shows how to size columns on the fly-->
+  <!--Outputs 2 columns a line 100 pixels followed by 2 more columns-->
+  <section class="container">
+    <section class="row">
+      <div class="col">Equal</div>
+      <div class="col">Equal</div>
+      <div class="w-100"></div>
+      <div class="col">Equal</div>
+      <div class="col">Equal</div>
+    </section>
+  </section>
+
+  <!--Shows how to size columns on the fly-->
+  <!--Outputs 3 columns accross the entire space the col-[x] dictates how many columns it spans-->
+  <section class="container">
+      <section class="row">
+        <div class="col">1 wide</div>
+        <div class="col-8">8 wide</div>
+        <div class="col-2">2 wide</div>
+      </section>
+    </section>
+
+    <!--Shows how to quickly reorder columns with order-[x]-->
+    <section class="container">
+        <section class="row">
+          <div class="col-sm order-3">First</div>
+          <div class="col-sm order-1">Second</div>
+          <div class="col-sm order-2">Thrid</div>
+        </section>
+     </section>
+  
+     <!--Shows how nested columns work-->
+     <section class="container">
+        <section class="row">
+          <div class="col bg-primary">First</div>
+          <section class="row">
+              <div class="col bg-info">Second</div>
+              <div class="col bg-succes">Thrid</div>    
+          </section>
+        </section>
+     </section>
+
+     <!--Shows how dynamic columns work based on size the sizes are controlled in the style with @media tags-->
+     <section class="container">
+       <section class="row">
+         <div class="col-sm-6 col-md-10 col-lg-4 col-xl-8 bg-warning">
+            <p>SM: 576<br>MD: 768px<br>LG: 992px<br>XL: 1200px</p>
+         </div>
+       </section>
+     </section>
+
+     <!--Shows how to align items start is the default option-->
+     <!--Use Around and between for equal spacing offset-[x] will bump by that number of columns-->
+     <section class="container" style="margin-top: 30px;">
+        <section class="row bg-warning align-items-center" style="height: 200px;">
+          <div class="col bg-secondary align-self-start">Col 1</div>
+          <div class="col bg-info align-self-center">Col 2</div>
+          <div class="col bg-succes">Col 3</div>
+        </section>
+     </section>
+
+     <!--Padding, margins, and display-->
+     <!--Spacing is controlled by sass map $spacer-->
+     <!--d-[arg] allows for dynamic sizing of elements-->
+     
+     <!--This move stuff aside the content by it-->
+     <aside class="container">
+       <section class="d-flex">
+         <div class="p-4">One</div>
+         <div class="p-4">Two</div>
+         <div class="p-4">Three</div>
+       </section>
+     </aside>
+
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+  </body>
+</html>
